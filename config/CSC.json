@@ -1,77 +1,47 @@
 {
-    "comparators": ["pca", "beta_binomial"],
-    "hists": [
-        {
-            "norm_type": "row",
-            "path": "Occupancy/hORecHits"
-        },
-        {
-            "norm_type": "row",
-            "path": "Occupancy/hOSegments"
-        },
-        {
-            "norm_type": "row",
-            "path": "Occupancy/hOStrips"
-        },
-        {
-            "norm_type": "row",
-            "path": "Occupancy/hOWires"
-        },
-        {
-            "path": "recHits/hRHGlobal*"
-        },
-        {
-            "always_show": true,
-            "jar_dir": "CSC",
-            "path": "recHits/hRHnrechits"
-        },
-        {
-            "jar_dir": "CSC",
-            "path": "Digis/hWireTBin_*"
-        },
-        {
-            "always_show": true,
-            "path": "Digis/hStripNFired"
-        },
-        {
-            "always_show": true,
-            "path": "Digis/hWirenGroupsTotal"
-        },
-        {
-            "path": "Segments/hSnhits*"
-        },
-        {
-            "always_show": true,
-            "jar_dir": "CSC",
-            "path": "Segments/hSnSegments"
-        },
-        {
-            "always_show": true,
-            "jar_dir": "CSC",
-            "path": "Segments/hSnhits"
-        },
-        {
-            "jar_dir": "CSC",
-            "path": "Segments/hSTimeCombined*"
-        },
-        {
-            "path": "Segments/hSTimeDiff*"
-        },
-        {
-            "path": "Segments/hSTimeVsZ"
-        },
-        {
-            "path": "Segments/hSChiSq*"
-        },
-        {
-            "jar_dir": "CSC",
-            "path": "Segments/hSGlobalPhi"
-        },
-        {
-            "jar_dir": "CSC",
-            "path": "Segments/hSGlobalTheta"
-        }
-    ],
-    "main_gdir": "DQMData/Run {0}/CSC/Run summary/CSCOfflineMonitor/",
-    "run_reg": "csc"
+    "main_gdir" : "DQMData/Run {0}/",
+    "description" : "Plots for CSC Doc1 (Online), as per spreadsheet below",
+    "descriptionX" : "https://docs.google.com/spreadsheets/d/1Bvqx-pq5qsOyRwjamzMN-_x0quZtbzxFqGzRokp6ysM",
+    "comparators": ["beta_binomial"], 
+    "hists" : [
+	{"path" : "CSC/CSCOfflineMonitor/recHits/hRHGlobal*"},
+	{"path" : "CSC/CSCOfflineMonitor/Occupancy/*"},
+	{"path" : "CSC/CSCOfflineMonitor/BXMonitor/*"},
+	{"path" : "CSC/Summary/CSC_Reporting"},
+	{"path" : "CSC/Summary/CSC_Unpacked"},
+	{"path" : "CSC/Summary/CSC_Unpacked_with_errors"},
+	{"path" : "CSC/Summary/CSC_wo_ALCT"},
+	{"path" : "CSC/Summary/CSC_wo_CFEB"},
+	{"path" : "CSC/Summary/CSC_wo_CLCT"},
+	{"path" : "CSC/Summary/CSC_Cathode_HMT_Reporting"},
+	{"path" : "CSC/Summary/CSC_LCT_HMT_Reporting"},
+	{"path" : "CSC/Summary/CSC_Format_Errors"},
+	{"path" : "CSC/Summary/CSC_Format_Warnings"},
+	{"path" : "CSC/Summary/CSC_L1A_out_of_sync"},
+	{"path" : "CSC/Summary/CSC_DMB_input_fifo_full"},
+	{"path" : "CSC/Summary/CSC_DMB_input_timeout"},
+	{"path" : "CSC/Summary/Plus_endcap_GEM_VFAT_occupancy"},
+	{"path" : "CSC/Summary/Minus_endcap_GEM_VFAT_occupancy"},
+	{"path" : "CSC/Summary/Minus_endcap_AFEB_RawHits_Time"},
+	{"path" : "CSC/Summary/Plus_endcap_ALCT0_dTime"},
+	{"path" : "CSC/Summary/Minus_endcap_ALCT0_dTime"},
+	{"path" : "CSC/Summary/Plus_endcap_CLCT0_dTime"},
+	{"path" : "CSC/Summary/Minus_endcap_CLCT0_dTime"},
+	{"path" : "CSC/Summary/Plus_endcap_ALCT_CLCT_Match_Time"},
+	{"path" : "CSC/Summary/Minus_endcap_ALCT_CLCT_Match_Time"},
+	{"path" : "CSC/Summary/Plus_endcap_CFEB_Comparators_Time"},
+	{"path" : "CSC/Summary/Minus_endcap_CFEB_Comparators_Time"},
+	{"path" : "CSC/Summary/Plus_endcap_CFEB_SCA_CellPeak_Time"},
+	{"path" : "CSC/Summary/Minus_endcap_CFEB_SCA_CellPeak_Time"},
+	{"path" : "CSC/Summary/All_DDUs_Event_Size"},
+	{"path" : "CSC/Summary/All_DDUs_Format_Errors"},
+	{"path" : "CSC/Summary/All_DDUs_Inputs_Errors"},
+	{"path" : "CSC/Summary/All_DDUs_Inputs_Warnings"},
+	{"path" : "CSC/Summary/All_DDUs_Inputs_with_Data"},
+	{"path" : "CSC/Summary/All_DDUs_L1A_Increment"},
+	{"path" : "CSC/Summary/All_DDUs_Live_Inputs"},
+	{"path" : "CSC/Summary/All_DDUs_Output_Path_Status"},
+	{"path" : "CSC/Summary/All_DDUs_Trailer_Errors"},
+	{"path" : "CSC/Summary/All_DDUs_in_Readout"}
+    ] 
 }
