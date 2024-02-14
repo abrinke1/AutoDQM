@@ -1,18 +1,17 @@
 {
-    "main_gdir" : "DQMData/Run {0}/",
+    "main_gdir" : "DQMData/Run {0}/RPC/Run summary/",
     "description" : "Plots for RPC Doc1 (Online), as per spreadsheet below",
     "descriptionX" : "https://docs.google.com/spreadsheets/d/1Bvqx-pq5qsOyRwjamzMN-_x0quZtbzxFqGzRokp6ysM",
-    "comparators": ["beta_binomial"], 
+    "comparators": ["beta_binomial"],
     "hists" : [
-	{"path" : "RPC/AllHits/SummaryHistograms/Occupancy_for_Barrel"},
-	{"path" : "RPC/AllHits/SummaryHistograms/Occupancy_for_Endcap"},
-	{"path" : "L1T/L1TStage2EMTF/rpcHitOccupancy"},
-	{"path" : "RPC/AllHits/SummaryHistograms/Occupancy_Roll_vs_Sector_Wheel_*"},
-	{"path" : "RPC/AllHits/SummaryHistograms/Occupancy_Ring_vs_Segment_Disk_*"},
-	{"path" : "RPC/AllHits/SummaryHistograms/BxDistribution_Wheel_*"},
-	{"path" : "RPC/AllHits/SummaryHistograms/BxDistribution_Disk_*"},
-	{"path" : "RPC/AllHits/SummaryHistograms/Multiplicity_*"},
-	{"path" : "RPC/AllHits/SummaryHistograms/RPCNoisyStrips_*"},
-	{"path" : "RPC/LinkMonitor/*"}
-    ] 
+	{"path" : "AllHits/SummaryHistograms/Occupancy_for_Barrel"},
+	{"path" : "AllHits/SummaryHistograms/Occupancy_for_Endcap"},
+	{"path" : "AllHits/SummaryHistograms/Occupancy_Roll_vs_Sector_Wheel_*"},
+	{"path" : "AllHits/SummaryHistograms/Occupancy_Ring_vs_Segment_Disk_*"},
+	{"path" : "AllHits/SummaryHistograms/BxDistribution_Wheel_*"},
+	{"path" : "AllHits/SummaryHistograms/BxDistribution_Disk_*"},
+	{"path" : "AllHits/SummaryHistograms/Multiplicity_*"},
+	{"path" : "AllHits/SummaryHistograms/RPCNoisyStrips_*"},
+	{"path" : "LinkMonitor/*"}
+    ]
 }
