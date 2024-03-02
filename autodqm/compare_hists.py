@@ -93,6 +93,7 @@ def compile_histpairs(chunk_index, chunk_size, config_dir,
     conf_list = config["hists"]
     main_gdir = config["main_gdir"]
     def_comparators = config['comparators'] if 'comparators' in config.keys() else None
+    def_sel_display = config['sel_display'] if 'sel_display' in config.keys() else None
 
     # ROOT files
     data_file = uproot.open(data_path)
@@ -106,6 +107,8 @@ def compile_histpairs(chunk_index, chunk_size, config_dir,
     for hconf in conf_list:
         # Set comparators if there are none
         if not 'comparators' in hconf.keys(): hconf['comparators'] = def_comparators
+        # Set selective display parameters if there are none
+        if not 'sel_display' in hconf.keys(): hconf['sel_display'] = def_sel_display
         # Get name of hist in root file
         h = str(hconf["path"].split("/")[-1])
         # Get parent directory of hist
@@ -141,6 +144,12 @@ def compile_histpairs(chunk_index, chunk_size, config_dir,
                 try:
                     data_hist = data_dir[h]
                     ref_hists = [ref_dir[h] for ref_dir in ref_dirs]
+
+                    # Setting any entries lower than zero to zero to avoid problems with the statistical tests
+                    data_hist.values()[data_hist.values() < 0] = 0
+                    for hist in ref_hists:
+                    	hist.values()[hist.values() < 0] = 0
+
                 except Exception as e:
                     continue
 
@@ -165,6 +174,12 @@ def compile_histpairs(chunk_index, chunk_size, config_dir,
                         try:
                             data_hist = data_dir[name[:-2]]
                             ref_hists = [ref_dir[name[:-2]] for ref_dir in ref_dirs]
+
+                            # Setting any entries lower than zero to zero to avoid problems with the statistical tests
+                            data_hist.values()[data_hist.values() < 0] = 0
+                            for hist in ref_hists:
+                                hist.values()[hist.values() < 0] = 0
+
                         except Exception as e:
                             continue
                         hPair = HistPair(dqmSource, hconf,
